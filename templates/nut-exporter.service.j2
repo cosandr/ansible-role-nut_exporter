@@ -10,6 +10,7 @@ Group=nut-exporter
 ExecStart=/usr/local/bin/nut-exporter \
   --log.level={{ nut_exporter_log_level }} \
   --web.listen-address={{ nut_exporter_listen_address }}
+Restart=always
 PrivateDevices=true
 PrivateTmp=true
 ProtectHome=true
