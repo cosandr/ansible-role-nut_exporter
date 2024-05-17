@@ -7,6 +7,7 @@ After=network.target nss-lookup.target
 Type=simple
 User=nut-exporter
 Group=nut-exporter
+EnvironmentFile={{ nut_exporter_env_dir }}/nut-exporter
 ExecStart=/usr/local/bin/nut-exporter \
   --log.level={{ nut_exporter_log_level }} \
   --web.listen-address={{ nut_exporter_listen_address }}
