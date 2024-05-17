@@ -1,0 +1,6 @@
+---
+
+- name: Restart nut exporter
+  ansible.builtin.systemd:
+    name: nut-exporter.service
+    state: restarted

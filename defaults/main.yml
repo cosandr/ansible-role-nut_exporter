@@ -1,0 +1,6 @@
+---
+
+nut_exporter_version: "latest"
+nut_exporter_listen_address: ":9199"
+nut_exporter_log_level: "warn"
+nut_exporter_env: {}

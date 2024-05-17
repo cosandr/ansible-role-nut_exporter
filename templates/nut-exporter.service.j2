@@ -1,0 +1,22 @@
+[Unit]
+Description=Network UPS Tools Prometheus Exporter
+Documentation=https://github.com/DRuggeri/nut_exporter
+After=network.target nss-lookup.target
+
+[Service]
+Type=simple
+User=nut-exporter
+Group=nut-exporter
+ExecStart=/usr/local/bin/nut-exporter \
+  --log.level={{ nut_exporter_log_level }} \
+  --web.listen-address={{ nut_exporter_listen_address }}
+PrivateDevices=true
+PrivateTmp=true
+ProtectHome=true
+ProtectControlGroups=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target
